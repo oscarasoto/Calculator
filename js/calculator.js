@@ -25,17 +25,17 @@
         var total = 0;
         switch (operator.value){
             case "+" :
-                total = parseInt(left.value) + parseInt(right.value);
+                total = parseFloat(left.value) + parseFloat(right.value);
                 console.log(total);
                 break;
             case "-" :
-                total = parseInt(left.value) - parseInt(right.value);
+                total = parseFloat(left.value) - parseFloat(right.value);
                 break;
-            case "*" :
-                total = parseInt(left.value) * parseInt(right.value);
+            case "x" :
+                total = parseFloat(left.value) * parseFloat(right.value);
                 break;
             case "/" :
-                total = parseInt(left.value) / parseInt(right.value);
+                total = parseFloat(left.value) / parseFloat(right.value);
                 break;
         }
         return total;

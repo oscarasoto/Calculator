@@ -27,47 +27,56 @@
         <h1>Calculator</h1>
 
         <div id="ouput" class="row">
-            <form class="col-sm-12">
-                <input class="col-sm-5" type="text" id="leftInput" value="" readonly>
-                <input class="col-sm-2" type="text" id="operator" value="" readonly>
-                <input class="col-sm-5" type="text" id="rightInput" value="" readonly>
+            <form class="col-xs-12">
+                <input class="col-xs-5" type="text" id="leftInput" value="" readonly>
+                <input class="col-xs-2" type="text" id="operator" value="" readonly>
+                <input class="col-xs-5" type="text" id="rightInput" value="" readonly>
             </form>
 
         </div><!-- output -->
 
         <div class="row input">
-            <div class="col-sm-12">
-                <button class="col-sm-3 digit">1</button>
-                <button class="col-sm-3 digit">2</button>
-                <button class="col-sm-3 digit">3</button>
-                <button class="col-sm-3 operator">+</button>
+            <div class="col-xs-12">
+                <a class="col-xs-9 operator" id="clear">C</a>
+                <button class="col-xs-3 operator">/</button>
+            </div>
+            <div class="col-xs-12">
+                <button class="col-xs-3 digit">7</button>
+                <button class="col-xs-3 digit">8</button>
+                <button class="col-xs-3 digit">9</button>
+                <button class="col-xs-3 operator">x</button>
+            </div>
+        </div>
+        <div class="row input">
+            <div class="col-xs-12">
+                <button class="col-xs-3 digit">4</button>
+                <button class="col-xs-3 digit">5</button>
+                <button class="col-xs-3 digit">6</button>
+                <button class="col-xs-3 operator">-</button>
             </div>
         </div>
         <div class="row input">
             <div class="col-sm-12">
-                <button class="col-sm-3 digit">4</button>
-                <button class="col-sm-3 digit">5</button>
-                <button class="col-sm-3 digit">6</button>
-                <button class="col-sm-3 operator">-</button>
+                <button class="col-xs-3 digit">1</button>
+                <button class="col-xs-3 digit">2</button>
+                <button class="col-xs-3 digit">3</button>
+                <button class="col-xs-3 operator">+</button>
+            </div>
+        </div>
+        <div class="row input">
+            <div class="col-xs-12">
+                <button class="col-xs-6 digit">0</button>
+                <button class="col-xs-3 digit">.</button>
+                <a class="col-xs-3 operator" id="equal">=</a>
             </div>
         </div>
         <div class="row input">
             <div class="col-sm-12">
-                <button class="col-sm-3 digit">7</button>
-                <button class="col-sm-3 digit">8</button>
-                <button class="col-sm-3 digit">9</button>
-                <button class="col-sm-3 operator">*</button>
+
             </div>
+
+
         </div>
-        <div class="row input">
-            <div class="col-sm-12">
-                <a class="col-sm-3 operator" id="clear">C</a>
-                <button class="col-sm-3 digit">0</button>
-                <a class="col-sm-3 operator" id="equal">=</a>
-                <button class="col-sm-3 operator">/</button>
-            </div>
-        </div>
-        <div class="row"></div>
 
 
     </div><!-- container -->

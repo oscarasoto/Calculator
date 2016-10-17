@@ -35,12 +35,11 @@ form input {
 }
 
 .input {
-    padding: 8px;
+    /*padding: 8px;*/
     font-size: 2em;
 }
 .digit {
     border: 1px solid #E5E5E5;
-    /*background-color: #E0E0E0;*/
 }
 .operator {
     border: 1px solid #E5E5E5;
@@ -66,5 +65,11 @@ form input {
 .operator:active {
     position: relative;
     top: 1px;
+}
+#clear {
+    height: 55px;
+}
+#equal {
+    height: 55px;
 }
 
