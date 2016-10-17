@@ -1,0 +1,70 @@
+body {
+    background: #333; /*url('../img/006.jpg') center center no-repeat;*/
+    background-size: cover;
+}
+
+#container {
+    width: 400px;
+    margin: 40px auto 0;
+    padding: 50px;
+    box-sizing: border-box;
+    background: url('../img/paper-pattern.jpg') top left repeat;
+    box-shadow: 0 10px 15px -8px #000;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    color: #532827;
+}
+
+h1 {
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    border-bottom: solid 1px #ddd;
+}
+
+form {
+    text-align: left;
+}
+
+form input {
+    padding: 8px;
+    margin: 10px 0;
+    /*background-color: #4C4C4C;*/
+    background-color: #E0E0E0;
+}
+
+.input {
+    padding: 8px;
+    font-size: 2em;
+}
+.digit {
+    border: 1px solid #E5E5E5;
+    /*background-color: #E0E0E0;*/
+}
+.operator {
+    border: 1px solid #E5E5E5;
+    background-color: #FD9145;
+}
+
+.digit:hover {
+    background: #4c2827;
+    border-bottom-color: #111;
+    color: white;
+}
+
+.digit:active {
+    position: relative;
+    top: 1px;
+}
+
+.operator:hover {
+    background: #4C4C4C;
+    border-bottom-color: #111;
+    color: white;
+}
+.operator:active {
+    position: relative;
+    top: 1px;
+}
+
