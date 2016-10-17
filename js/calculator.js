@@ -26,7 +26,6 @@
         switch (operator.value){
             case "+" :
                 total = parseFloat(left.value) + parseFloat(right.value);
-                console.log(total);
                 break;
             case "-" :
                 total = parseFloat(left.value) - parseFloat(right.value);
@@ -48,13 +47,13 @@
         buttons[i].addEventListener("click", function (event) {
             event.preventDefault();
             var objectJustClicked = this;
-            if (document.getElementById("operator").value != "" && objectJustClicked.getAttribute("class") == "col-sm-3 digit") {
+            if (document.getElementById("operator").value != "" && objectJustClicked.getAttribute("class") == "col-xs-3 digit") {
                 var rightInput = handleDigitRightSide(objectJustClicked);
             }
-            if (objectJustClicked.getAttribute("class") == "col-sm-3 digit" && document.getElementById("rightInput").value == "") {
+            if (objectJustClicked.getAttribute("class") == "col-xs-3 digit" && document.getElementById("rightInput").value == "") {
                 var leftInput = handleDigitLeftSide(objectJustClicked);
             }
-            if (objectJustClicked.getAttribute("class") == "col-sm-3 operator" && document.getElementById("leftInput").value != "") {
+            if (objectJustClicked.getAttribute("class") == "col-xs-3 operator" && document.getElementById("leftInput").value != "") {
                 var operator = handleOperator(objectJustClicked);
             }
         });
@@ -72,7 +71,7 @@
     });
 
     // Clears inputs
-    var clear = document.getElementById("clear")
+    var clear = document.getElementById("clear");
     clear.addEventListener("click", function (event) {
          event.preventDefault();
 
