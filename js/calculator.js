@@ -1,32 +1,31 @@
 (function () {
     "use strict";
 
+    var leftInput = document.getElementById("leftInput");
+    var operator = document.getElementById("operator");
+    var rightInput = document.getElementById("rightInput");
+
 // Check functions.
     function isARightSideDigit(objectJustClicked) {
-        return !!(document.getElementById("operator").value != "" && objectJustClicked.getAttribute("class") == "col-xs-3 digit");
+        return !!(operator.value != "" && objectJustClicked.getAttribute("class") == "col-xs-3 digit");
     }
     function isALeftSideDigit(objectJustClicked) {
-        return !!(objectJustClicked.getAttribute("class") == "col-xs-3 digit" && document.getElementById("rightInput").value == "");
+        return !!(objectJustClicked.getAttribute("class") == "col-xs-3 digit" && rightInput.value == "");
 
     }
     function isAnOperator(objectJustClicked) {
-        return !!(objectJustClicked.getAttribute("class") == "col-xs-3 operator" && document.getElementById("leftInput").value != "");
+        return !!(objectJustClicked.getAttribute("class") == "col-xs-3 operator" && leftInput.value != "");
     }
 
 // Prints values in the Inputs.
     function handleDigitLeftSide(digit) {
-        var display = document.getElementById("leftInput");
-        display.value += digit.innerText;
+        leftInput.value += digit.innerText;
     }
-
     function handleOperator(digit) {
-        var display = document.getElementById("operator");
-        display.value = digit.innerText;
+        operator.value = digit.innerText;
     }
-
     function handleDigitRightSide(digit) {
-        var display = document.getElementById("rightInput");
-        display.value += digit.innerText;
+        rightInput.value += digit.innerText;
     }
 
 // Calculate the math for each type of operation.
@@ -73,9 +72,7 @@
     var equal = document.getElementById("equal");
     equal.addEventListener("click", function (event) {
         event.preventDefault();
-        var leftInput = document.getElementById("leftInput");
-        var operator = document.getElementById("operator");
-        var rightInput = document.getElementById("rightInput");
+
         // Check if has input before performing the math.
         if (leftInput.value != "" && rightInput.value != ""){
             leftInput.value = calculate(leftInput.value,operator.value,rightInput.value);
@@ -88,9 +85,9 @@
     var clear = document.getElementById("clear");
     clear.addEventListener("click", function (event) {
          event.preventDefault();
-         document.getElementById("leftInput").value = "";
-         document.getElementById("operator").value = "";
-         document.getElementById("rightInput").value = "";
+         leftInput.value = "";
+         operator.value = "";
+         rightInput.value = "";
      })
 
 })();
