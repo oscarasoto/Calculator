@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-// Check functions
+// Check functions.
     function isARightSideDigit(objectJustClicked) {
         return !!(document.getElementById("operator").value != "" && objectJustClicked.getAttribute("class") == "col-xs-3 digit");
     }
@@ -13,7 +13,7 @@
         return !!(objectJustClicked.getAttribute("class") == "col-xs-3 operator" && document.getElementById("leftInput").value != "");
     }
 
-// Prints values in the Inputs
+// Prints values in the Inputs.
     function handleDigitLeftSide(digit) {
         var display = document.getElementById("leftInput");
         display.value += digit.innerText;
@@ -29,7 +29,7 @@
         display.value += digit.innerText;
     }
 
-// Calculate the math for each type of operation
+// Calculate the math for each type of operation.
     function calculate(left, operator, right) {
 
         var total = 0;
@@ -50,7 +50,7 @@
         return total;
     }
 
-// Generates an event for each button
+// Generates an event for each button.
     var buttons = document.getElementsByTagName("button");
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function (event) {
@@ -69,21 +69,22 @@
         });
     }
 
-// Sends information to perform the math and prints the result in the left side
+// Sends information to perform the math and prints the result in the left side.
     var equal = document.getElementById("equal");
     equal.addEventListener("click", function (event) {
         event.preventDefault();
-        var leftInput = document.getElementById("leftInput").value;
-        var operator = document.getElementById("operator").value;
-        var rightInput = document.getElementById("rightInput").value;
-        if (document.getElementById("leftInput").value != "" && document.getElementById("rightInput").value != ""){
-            document.getElementById("leftInput").value = calculate(leftInput,operator,rightInput);
-            document.getElementById("operator").value = "";
-            document.getElementById("rightInput").value = "";
+        var leftInput = document.getElementById("leftInput");
+        var operator = document.getElementById("operator");
+        var rightInput = document.getElementById("rightInput");
+        // Check if has input before performing the math.
+        if (leftInput.value != "" && rightInput.value != ""){
+            leftInput.value = calculate(leftInput.value,operator.value,rightInput.value);
+            operator.value = "";
+            rightInput.value = "";
         }
     });
 
-// Clears inputs
+// Clears inputs.
     var clear = document.getElementById("clear");
     clear.addEventListener("click", function (event) {
          event.preventDefault();
